@@ -24,6 +24,7 @@ ALLOWED_HOSTS += ['.vercel.app', '.onrender.com', 'fondeino.com', 'www.fondeino.
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+PREPEND_WWW = IS_PRODUCTION
 CSRF_TRUSTED_ORIGINS = ['https://fondeino.com', 'https://www.fondeino.com']
 CSRF_FAILURE_VIEW = 'fondeino_web.csrf_views.csrf_failure'
 
